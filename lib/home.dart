@@ -71,7 +71,7 @@ class _HomeState extends State<Home> {
 
   Future _getData() async {
     try {
-      final response = await http.get(
+      final response = await http.get(Uri.parse(
           'https://newsapi.org/v2/top-headlines?country=id&apiKey=2838ca6c5cba4ea786e37d260f7e1956');
 
       if (response.statusCode == 200) {
